@@ -7,7 +7,6 @@ ENV PORT=3000
 COPY . /server
 WORKDIR /server
 
-VOLUME ["server"]
 
 RUN npm install
 
