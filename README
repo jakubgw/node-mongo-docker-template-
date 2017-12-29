@@ -1,10 +1,14 @@
+npm install typescript@2.0.6 --save-dev
+
 npm init
-tsc --init
+tsc --init and configure 
+
+npm install @types/node --save
 
 mkdir src 
 mkdir dist 
 
-add  to the tsconfig
-"include": [
-        "src/**/*"
-],
+create Dockerfile
+
+docker build -f .\Dockerfile -t jakubgw/node-template .
+
