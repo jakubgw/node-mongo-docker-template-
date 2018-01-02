@@ -1,11 +1,18 @@
 const http = require('http')
-var mongoose = require("mongoose");
+
+
+var MongoClient = require('mongodb').MongoClient;
+var url = "mongodb://mongodb:27017/";
+
+MongoClient.connect(url, function(err:any, db:any) {
+  if (err) throw err;
+  console.log("Database created!");
+  db.close();
+});
+
 
 const port = 3000
 
-
-//DB setup
-//mongoose.connect("mongodb://mongo:27017");
 
 const requestHandler = (request : any, response: any) => {
   console.log(request.url)

@@ -9,8 +9,16 @@ services:
     networks: 
       - nodeapp-network    
   mongodb:
-    image: mongo
-    
+    build :
+      context: .
+      dockerfile: mongo.Dockerfile  
+    networks: 
+      - nodeapp-network    
+    ports:
+      - "27017:27017"
+    env_file:
+      - ./.docker/env/mongo.env
+
 networks: 
     nodeapp-network:
       driver : bridge 
