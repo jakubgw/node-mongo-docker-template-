@@ -17,11 +17,15 @@ services:
   node:
     build :
       context: .
-      dockerfile: node.Dockerfile
+      dockerfile: node.Dockerfile      
+    command: npm run debug    
+    volumes:
+      - .:/server
     ports: 
-      - "3000:3000"
+      - "3000:3000"      
+      - "5858:5858"
     networks: 
-      - nodeapp-network    
+      - nodeapp-network     
     depends_on:
       - mongodb
 
