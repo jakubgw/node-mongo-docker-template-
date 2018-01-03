@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node ./dist ./dist/index.js",    
-    "debug": "nodemon --watch ./dist --inspect=0.0.0.0:5858 --nolazy ./dist/index.js -e",
+    "start": "node ./dist ./dist/index.js",       
+    "debug": "nodemon --legacy-watch  --inspect=0.0.0.0:5858 --nolazy ./dist/index.js",
     "watch": "tsc -w",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

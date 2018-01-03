@@ -20,7 +20,7 @@ services:
       dockerfile: node.Dockerfile      
     command: npm run debug    
     volumes:
-      - .:/server
+      - ./dist:/server/dist
     ports: 
       - "3000:3000"      
       - "5858:5858"
